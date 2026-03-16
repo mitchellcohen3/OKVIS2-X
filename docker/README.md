@@ -9,7 +9,7 @@ cd docker
 ```
 Build the docker image using
 ```bash
-docker build -t okvis2x Dockerfile_ros2_22_04 .
+docker build -t okvis2x -f Dockerfile_ros2_22_04 .
 ```
 
 Then, run the docker container by adding the following alias to your `~/.bashrc` file
@@ -28,3 +28,8 @@ The container can then be started by running
 ```bash
 okvis2x_docker
 ```
+
+Build the repo using
+```bash
+colcon build --cmake-args --parallel-workers 1 -DUSE_NN=OFF -DUSE_COLIDMAP=OFF -DHAVE_LIBREALSENSE=OFF -DCMAKE_BUILD_TYPE=Release
+``` 
