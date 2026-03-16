@@ -1,0 +1,18 @@
+FROM osrf/ros:humble-desktop
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    cmake \
+    build-essential \
+    # Core OKVIS2-X deps
+    libgoogle-glog-dev \
+    libatlas-base-dev \
+    libeigen3-dev \
+    libsuitesparse-dev \
+    libboost-dev \
+    libboost-filesystem-dev \
+    libopencv-dev \
+    libpcl-dev \
+    libgeographic-dev \
+    libpcl-dev
